@@ -6,6 +6,7 @@
 
 #### DAO와 Connection클래스의 분리를 위한 아이디어
 > 1. DAO클래스의 멤버로 Connection을 포함
+
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/ConnectionMakerDiv.PNG)
 
 - 이 아이디어의 문제점
@@ -16,9 +17,11 @@
 
 > 2. Connection의 타입을 인터페이스로 설정
 
-[interface]
-[interfacecode1]
-[interfacecode2]
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/interface.PNG)
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/interfacecode1.PNG)
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/interfacecode2.PNG)
 
 - 이 아이디어의 문제점
 > - 생성자의 ConnectionMaker 초기화 코드에 ConnectionMaker의 구현 클래스명이 필요하다.
@@ -27,12 +30,14 @@
 
 - UserDao가 Connection클래스를 알아야 하는 근본적인 이유
 > - UserDao의 관심사가 아닌 DB Connection 부분을 UserDao를 구현한 사람이 설정해준다.
-[dependency]
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/dependency.PNG)
 
 > 3. 클라이언트 오브젝트가 UserDao와 Connection의 관계를 설정
 
 > UserDao를 실제로 사용하는 클라이언트에서, 어떤 Connection을 사용할지 결정해서 UserDao에 주입해준다.
-[UserDaoTest]
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/UserDaoTest.PNG)
 
 - UserDaoTest 클래스에서 UserDao와 Connection을 설정했을 때의 장점
 > - UserDao가 Connection 구현 클래스 이름을 알 필요가 없다.
@@ -67,23 +72,26 @@
 > - 객체의 생성 방법을 결정하고 그렇게 만들어진 오브젝트를 돌려주는 클래스
 > - 특별한 문제를 해결하기 위해 사용되는 추상 팩토리 패턴이나 팩토리 메소드 패턴과는 다르다.
 
-[UserDaoFactory]
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/UserDaoFactory.PNG)
 
 
 #### 설계도로서의 팩토리
 - 분리된 오브젝트들의 역할과 관계
 > - UserDao와 ConnectionMaker는 각각 애플리케이션의 핵심적인 데이터 로직과 기술 로직을 담당
 > - DaoFactory는 이런 애플리케이션의 오브젝트들을 구성하고 그 관계를 정의히는 책임을 맡고 있음
-[ObjectFactory]
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/ObjectFactory.PNG)
 
 
 ### 1.4.2 오브젝트 팩토리의 활용
 - 오브젝트 팩토리의 문제점
 > - 다른 Dao의 기능을 구현할 때, ConnectionMaker의 구현 클래스를 선택하는 부분이 중복으로 나타난다.
-[FactoryDup]
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/FactoryDup.PNG)
 
 > - 이를 해결하려면 Connection 구현 부분을 별도의 메소드로 뽑아낸다.
-[ObjectFactory]
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/ConnectionMethod.PNG)
 
 ### 1.4.3 제어권의 이전을 통한 제어관계 역전
 - 제어의 역전
