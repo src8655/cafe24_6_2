@@ -6,8 +6,7 @@
 
 #### DAO와 Connection클래스의 분리를 위한 아이디어
 > 1. DAO클래스의 멤버로 Connection을 포함
-![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/5~6.%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98IoC,%20%EC%8B%B1%EA%B8%80%ED%86%A4%20%EB%A0%88%EC%A7%80%EC%8A%A4%ED%8A%B8%EB%A6%AC%EC%99%80%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%20%EC%8A%A4%EC%BD%94%ED%94%84/img/img01.JPG)
-[ConnectionMakerDiv
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/ConnectionMakerDiv.PNG)
 
 - 이 아이디어의 문제점
 > - Connection 클래스를 구현한 곳마다 메소드 이름이 다를 경우 DAO이름을 매번 수정해주어야 한다.
