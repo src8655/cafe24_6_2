@@ -5,7 +5,7 @@
 > Connection클래스와 DAO클래스의 연관관계를 분리하지 못함
 
 #### DAO와 Connection클래스의 분리를 위한 아이디어
-> 1. DAO클래스의 멤버로 Connection을 포함
+##### 1. DAO클래스의 멤버로 Connection을 포함
 
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/ConnectionMakerDiv.PNG)
 
@@ -15,7 +15,7 @@
 
 ### 1.3.2 인터페이스의 도입
 
-> 2. Connection의 타입을 인터페이스로 설정
+##### 2. Connection의 타입을 인터페이스로 설정
 
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/interface.PNG)
 
@@ -33,7 +33,7 @@
 
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/dependency.PNG)
 
-> 3. 클라이언트 오브젝트가 UserDao와 Connection의 관계를 설정
+##### 3. 클라이언트 오브젝트가 UserDao와 Connection의 관계를 설정
 
 > UserDao를 실제로 사용하는 클라이언트에서, 어떤 Connection을 사용할지 결정해서 UserDao에 주입해준다.
 
@@ -46,7 +46,7 @@
 ### 1.3.4 원칙과 패턴
 
 #### 객체지향 설계 5대 원칙
-> - 객체지향 기술은 어느 날 한 번에 만들어진 것이라기보다는 오랜 시간에 걸쳐 점진적으로 발전해온 기슐이라고 볼 수 있다. 그렇기 때문에 객체지향 프로그래밍 언어의 종류도 다양하고 객체지항 기술을 받아들이고 적용하는 관점과 기법도 조금씩 차이가 있다. 그럼에도 객체지향이라는 이름으로 묶ㅇㄹ 수 있는 분명한 특징이 있다. 객체지향 설계 원칙은 객체지향의 특징을 잘 살릴 수 있는 설계의 특징을 말한다.
+> - 객체지향 기술은 어느 날 한 번에 만들어진 것이라기보다는 오랜 시간에 걸쳐 점진적으로 발전해온 기슐이라고 볼 수 있다. 그렇기 때문에 객체지향 프로그래밍 언어의 종류도 다양하고 객체지항 기술을 받아들이고 적용하는 관점과 기법도 조금씩 차이가 있다. 그럼에도 객체지향이라는 이름으로 묶을 수 있는 분명한 특징이 있다. 객체지향 설계 원칙은 객체지향의 특징을 잘 살릴 수 있는 설계의 특징을 말한다.
 
 - SRP(The Single Responsibility Principle): 단일 책임 원칙 - 한 클래스는 하나의 책임만 가져야 한다.
 - OCP(The Open Closed Principle): 개방 폐쇄 원칙 - 소프트웨어 요소는 확장에는 열려 있으나 변경에는 닫혀 있어야 한다.
