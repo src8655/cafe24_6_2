@@ -17,7 +17,7 @@
     조부광
     1.7 의존관계주입(DI)
 
-### [2장 테스트]()
+### [2장 테스트](https://github.com/src8655/cafe24_6_2/tree/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8)
     김성주
     2.1 USERDAOTEST 다시 보기
     2.2 USERDAOTEST 개선
@@ -27,7 +27,7 @@
     2.4 스프링 테스트적용
     2.5 학습 테스트로 배우는 스프링
     
-### [3장 템플릿]()
+### [3장 템플릿](https://github.com/src8655/cafe24_6_2/tree/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/3%EC%9E%A5%20%ED%85%9C%ED%94%8C%EB%A6%BF)
     조부광
     3.1 다시 보는 초난감 DAO
     3.2 변하는 것과 변하지 않는 것
@@ -40,7 +40,7 @@
     윤민호
     3.6 스프링의 JDBCTEMPLATE
     
-### [4장 예외]()
+### [4장 예외](https://github.com/src8655/cafe24_6_2/tree/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/4%EC%9E%A5%20%EC%98%88%EC%99%B8)
     윤민호
     4.1 사라진 SQLEXCEPTION
     4.2 예외 전환
