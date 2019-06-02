@@ -62,8 +62,9 @@
 > - 테스트 중에 에러가 발생하는 것은 쉽게 확인이 가능하다.
 > - 하지만 테스트가 실패하는 것은 별도의 확인 작업과 그 결과가 있어야만 알 수 었다.
 
-{BeforeTestCode}
-{AfterTestCode}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/BeforeTestCode.PNG)
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/AfterTestCode.PNG)
 
 
 > - 이 테스트는 UserDao의 두 가지 기능이 정상적으로 동작하는지를 언제든지 손쉽게 확인할 수 있게 해준다. 따라서 이 코드의 동작에 영향을 미칠 수 있는 어떤 변화라도 생기면 언제든 다시 실행해볼 수 있다.
@@ -85,7 +86,9 @@
 #### 테스트 메소드 전환
 
 - JUnit 프레임워크에서 동작하도록 테스트 메소드를 재구성
-{ChangeJUnit}
+
+
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/ChangeJUnit.PNG)
 
 
 #### 검증 코드 전환
@@ -93,14 +96,16 @@
 > - assertThat() 메소드는 첫 번째 파라미터의 값을 뒤에 나오는 매처(matcher)라고 불리는 조건으로 비교해서 일치하면 다옴으로 넘어가고， 아니면 테스트가 실패하도록 만들어준다.
 > - JUnit은 예외가 발생하거나 assertThat() 에서 실패하지 않고 테스트 메소드의 실행이 완료되면 테스트가 성공했다고 인식한다.
 
-{JUnitUserDaoTest}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/JUnitUserDaoTest.PNG)
+
 
 #### JUnit 테스트 실행
 
 > - JUnit 프레임워크도 자바 코드로 만들어진 프로그램이므로 어디선가 한 번은 JUnit 프레임워크를 시작시켜 줘야 한다.
 > - 어디에든 main() 메소드를 하나 추가하고, 그 안에 JUnitCore 클래스의 main 메소드를 호출해주는 간단한 코드를 넣어주면 된다. 메소드 파라미터에는 @Test 테스트 메소드를 가진 클래스의 이름을 넣어준다.
 
-{JunitMain}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/JunitMain.PNG)
+
 
 > - 테스트가 실패하면 OK 대신 FAILURES!! 라는 내용이 출력되고, 총 수행한 테스트 중에서 몇 개의 테스트가 실패했는지 보여준다.
 > - 테스트 수행 중에 일반 예외가 발생한 경우에도 마찬가지로 테스트 수행은 중단되고 테스트는 실패한다.
@@ -118,7 +123,7 @@
 #### IDE
 > - 대부분의 자바 개발자가 사용하고 있는 사실상의 표준 자바 IDE인 이클립스는 오래전부터 JUnit 테스트를 지원하는 기능을 제공하고 있다.
 
-{EclipseJUnit}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/EclipseJUnit.PNG)
 
 > - 이 뷰에서 테스트의 총 수행시간, 실행한 테스트의 수, 태스트 에러의 수, 테스트 실패의 수를 확인할 수 있다.
 > - 테스트가 실패해서 코드를 수정한 뒤, 다시 테스트를 실행하려면 JUnit 테스트 뷰의 녹색 Rerun Test 버튼을 클릭하면 된다.
@@ -149,7 +154,7 @@
 > - 예외 발생 여부는 메소드를 실행해서 리턴 값을 비교하는 방법으로 확인할 수 없다. 즉 assertThat() 메소드로는 검증이불가능하다.
 > - 이런 경우를 위해 JUnit은 예외조건 태스트를 위한 특별한 방법을 제공해준다.
 
-{JUnitException}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/JUnitException.PNG)
 
 > - @Test에 expected를 추가해놓으면 보통의 테스트와는 반대로, 정상적으로 테스트 메소드를 마치면 테스트가 실패하고. expected에서 지정한 예외가 던져지면 테스트가 성공한다. 예외가 반드시 발생해야 하는 경우를 테스트하고 싶을 때 유용하게 쓸 수 있다.
 
@@ -166,7 +171,7 @@
 
 #### 기능 설계를 위한 테스트
 
-{GetUserFailure}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/GetUserFailure.PNG)
 
 > - 기능설계, 구현, 테스트라는 일반적인 개발 흐름의 기능설계에 해당하는 부분을 이 테스트 코드가 일부분 담당하고 있다고 볼 수도 있다.
 > - 만약 테스트가 실패하면 이때는 설계한 대로 코드가 만들어지지 않았음을 바로 알 수 있다. 그리고 문제가 되는 부분이 무엇인지에 대한 정보도 테스트 결과를 통해 얻을 수 있다.
@@ -195,7 +200,7 @@
 > 6. 나머지 테스트 메소드에 대해 2 ~ 5 번을 반복한다.
 > 7. 모든 테스트의 결과를 종합해서 돌려준다.
 
-{JUnitProcess}
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/JUnitProcess.PNG)
 
 
 #### 픽스처
