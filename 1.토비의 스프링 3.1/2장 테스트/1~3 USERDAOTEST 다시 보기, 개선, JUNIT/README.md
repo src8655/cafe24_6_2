@@ -6,8 +6,7 @@
 
 ### 2.1.2 UserDaoTest의 특징
 
-{TestByMain}
-![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/1%EC%9E%A5%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%EC%99%80%20%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/3~4.DAO%EC%9D%98%20%ED%99%95%EC%9E%A5%2C%20%EC%A0%9C%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%A0%84(IoC)/ConnectionMakerDiv.PNG)
+![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/2%EC%9E%A5%20%ED%85%8C%EC%8A%A4%ED%8A%B8/1~3%20USERDAOTEST%20%EB%8B%A4%EC%8B%9C%20%EB%B3%B4%EA%B8%B0%2C%20%EA%B0%9C%EC%84%A0%2C%20JUNIT/TestByMain.PNG)
 
 - 이 테스트 코드의 내용
 > - 자바에서 가장 손쉽게 실행 가능한 main() 메소드를 이용한다.
