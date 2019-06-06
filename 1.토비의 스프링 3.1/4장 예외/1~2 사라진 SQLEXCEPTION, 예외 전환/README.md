@@ -180,7 +180,6 @@
 
 ![enter image description here](https://raw.githubusercontent.com/src8655/cafe24_6_2/master/1.%ED%86%A0%EB%B9%84%EC%9D%98%20%EC%8A%A4%ED%94%84%EB%A7%81%203.1/4%EC%9E%A5%20%EC%98%88%EC%99%B8/1~2%20%EC%82%AC%EB%9D%BC%EC%A7%84%20SQLEXCEPTION,%20%EC%98%88%EC%99%B8%20%EC%A0%84%ED%99%98/img/img10.JPG)
 
-- 낙관적인 예외가 있는 위 그림은 DataAccessException의 계층구조라는 것을 알 수 있다.
 - DataAccessException 계층구조에는 DAO에서 직접 활용할 수 있는 예외도 정의되어 있다.
 - 스프링의 데이터 액세스 지원 기술을 이용하면 기술에 독립적이고 일관성 있는 예외를 던질 수 있다.
 - 다음은 DataAccessException 계층구조의 일부이다.
